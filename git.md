@@ -27,17 +27,20 @@
 	- git branch -D [branch name] : force delete branch
 10. github 上创建一个 repo:远程仓库, 然后让本地仓库和远程仓库绑定： 
  	- git remote add origin https://github.com/....git : connected to remote repo;
- 	- git config credential.helper store   : commands before push to save user name and password locally;
- 	- git push --set-upstream origin master
-11. 邀请别的github账户 加入你的项目: 即对该远程repo拥有push的权限
+11. 本地仓库与远程仓库解绑
+	- git remote -v : 查看当前本地repo的远程仓库关联情况
+	- git remote rm [origin] : 与远程origin解绑
+12. git config credential.helper store   : commands before push to save user name and password locally;
+13. git push --set-upstream origin master
+14. 邀请别的github账户 加入你的项目: 即对该远程repo拥有push的权限
 	- github中collaborators 中搜索用户名
-12. 合作者流程：
+15. 合作者流程：
 	- git clone https://github.com/..... : 从远处仓库中clone到本地
 	- git add .
 	- git commit -m '' 
 	- git push : 直接push 
 	    git config credential.helper store   : commands before push to save user name and password locally;
-13. 项目主 把合作者提交的最新修改拉到本地
+16. 项目主 把合作者提交的最新修改拉到本地
         - git pull : 把最新修改都拉到本地
  
  
